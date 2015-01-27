@@ -1,0 +1,24 @@
+<template name="layout">
+  {{#if loading}} 
+
+    <paper-spinner class="center" active></paper-spinner>
+
+  {{else}}
+    {{#if currentUser}}  
+      
+      {{> yield region='navbar'}}
+      
+      <div class="container">
+        {{> yield}}
+      </div>
+      
+      {{> yield region='footer'}}
+
+    {{else}}
+      <div class="container">
+        {{> fullPageAtForm}}
+      </div>
+    {{/if}}
+  {{/if}}
+
+</template>

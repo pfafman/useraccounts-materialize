@@ -1,0 +1,42 @@
+<template name="navbar">
+  <nav>
+    <div class="nav-wrapper">
+      <a class="brand-logo">Materialize</a>
+      <ul id="nav-mobile" class="right side-nav full">
+        {{> menu}}
+      </ul>
+      <a class="button-collapse" href="#" data-activates="nav-mobile">
+        <i class="mdi-navigation-menu"></i>
+      </a>
+      <span class="hide-on-med-and-down pull-right">
+        <ul>
+          {{> menu}}
+        </ul>
+      </span>
+    </div>
+  </nav>
+</template>
+
+
+<template name="menu">
+  <li>
+    <a href="{{pathFor 'buttonTest'}}" class="waves-effect">
+      <i class="small mdi-action-settings left"></i>Button Test
+    </a>
+  </li>
+  <li>
+    <a href="{{pathFor 'formTest'}}" class="waves-effect">
+      <i class="small mdi-action-input left"></i>Form Test
+    </a>
+  </li>
+  <li>
+    <a href="{{pathFor 'tableTest'}}" class="waves-effect">
+      <i class="small mdi-action-list left"></i>
+      Table Test
+    </a>
+  </li>
+  
+  <li>
+    {{> atNavButton}}
+  </li>
+</template>
